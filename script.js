@@ -1,84 +1,192 @@
 ```javascript
-// ==========================================
-// MOBILE NAVIGATION
-// ==========================================
+/* =====================================================
+   BARNABAS MBACHU PORTFOLIO
+   MAIN JAVASCRIPT
+===================================================== */
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
 
 const menuToggle = document.getElementById("menuToggle");
+
 const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-});
 
+if (menuToggle && navMenu) {
 
-// ==========================================
-// CLOSE MENU WHEN LINK IS CLICKED
-// ==========================================
+    menuToggle.addEventListener("click", () => {
 
-document.querySelectorAll("nav a").forEach(link => {
+        const isOpen =
+            navMenu.classList.toggle("active");
 
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
     });
 
-});
+
+    /* Close menu after clicking a link */
+
+    const navLinks =
+        navMenu.querySelectorAll("a");
 
 
-// ==========================================
-// NAVBAR SHADOW ON SCROLL
-// ==========================================
+    navLinks.forEach(link => {
 
-window.addEventListener("scroll", () => {
+        link.addEventListener("click", () => {
 
-    const navbar = document.querySelector(".navbar");
+            navMenu.classList.remove("active");
 
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = "0 5px 25px rgba(0,0,0,0.15)";
-    } else {
-        navbar.style.boxShadow = "none";
-    }
-
-});
-
-
-// ==========================================
-// REVEAL ANIMATION
-// ==========================================
-
-const revealElements = document.querySelectorAll(
-    ".highlight-card, .case-card, .tool-card, .timeline-content"
-);
-
-const revealObserver = new IntersectionObserver(
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-
-                revealObserver.unobserve(entry.target);
-
-            }
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
         });
 
-    },
-    {
-        threshold: 0.12
+    });
+
+}
+
+
+/* =====================================================
+   NAVBAR SHADOW
+===================================================== */
+
+const navbar =
+    document.querySelector(".navbar");
+
+
+function updateNavbar() {
+
+    if (!navbar) return;
+
+
+    if (window.scrollY > 40) {
+
+        navbar.style.boxShadow =
+            "0 8px 30px rgba(0,0,0,0.18)";
+
+    } else {
+
+        navbar.style.boxShadow =
+            "none";
+
     }
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateNavbar,
+    { passive: true }
 );
 
 
-revealElements.forEach(element => {
+updateNavbar();
 
-    element.style.opacity = "0";
-    element.style.transform = "translateY(25px)";
-    element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
 
-    revealObserver.observe(element);
+/* =====================================================
+   SCROLL REVEAL ANIMATION
+===================================================== */
 
-});
+const revealElements =
+    document.querySelectorAll(
+        ".highlight-card, .tool-card, .case-card, .timeline-content"
+    );
+
+
+if ("IntersectionObserver" in window) {
+
+
+    const revealObserver =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "revealed"
+                        );
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealElements.forEach(element => {
+
+        element.classList.add(
+            "reveal-ready"
+        );
+
+        revealObserver.observe(element);
+
+    });
+
+}
+
+
+/* =====================================================
+   FOOTER YEAR
+===================================================== */
+
+const yearElement =
+    document.getElementById("year");
+
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =====================================================
+   CLOSE MOBILE MENU WITH ESCAPE KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            navMenu &&
+            navMenu.classList.contains("active")
+        ) {
+
+            navMenu.classList.remove("active");
+
+            if (menuToggle) {
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+    }
+);
 ```
