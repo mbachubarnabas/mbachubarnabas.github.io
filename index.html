@@ -3,91 +3,277 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Barnabas Mbachu - IT Support, Customer Support and CRM professional portfolio.">
+  <meta name="description" content="Barnabas Mbachu — IT Support, Customer Support and CRM professional portfolio.">
+  <meta name="author" content="Barnabas Mbachu">
+  <meta name="theme-color" content="#0b1220">
   <title>Barnabas Mbachu | IT Support & Customer Support</title>
-  <style>
-    :root{--ink:#102033;--muted:#5d6b7a;--line:#e5eaf0;--bg:#f7f9fc;--card:#fff;--accent:#155eef}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-    a{color:var(--accent);text-decoration:none}.wrap{max-width:1050px;margin:auto;padding:0 24px}
-    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.brand{font-weight:800;font-size:20px}
-    nav .links{display:flex;gap:20px;font-size:14px}.hero{padding:85px 0 70px;background:#fff}
-    .eyebrow{font-weight:700;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;font-size:13px}
-    h1{font-size:clamp(40px,7vw,68px);line-height:1.02;margin:14px 0}.hero p{font-size:19px;color:var(--muted);max-width:720px}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:12px 18px;border-radius:9px;border:1px solid var(--line);font-weight:700}
-    .primary{background:var(--accent);color:white;border-color:var(--accent)}section{padding:65px 0}
-    h2{font-size:32px;margin:0 0 12px}.lead{color:var(--muted);max-width:760px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
-    .card h3{margin-top:0}.tag{display:inline-block;background:#eef4ff;color:#174ea6;padding:5px 9px;border-radius:999px;font-size:12px;margin:3px}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contact{background:#102033;color:#fff}.contact .lead{color:#cbd5e1}
-    footer{padding:25px 0;color:var(--muted);font-size:14px}
-    @media(max-width:760px){nav .links{display:none}.grid,.two{grid-template-columns:1fr}.hero{padding-top:55px}}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="wrap"><nav>
-  <div class="brand">Barnabas Mbachu</div>
-  <div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
-</nav></div></header>
+  <div class="progress" id="progress"></div>
 
-<main>
-<section class="hero"><div class="wrap">
-  <div class="eyebrow">IT Support • Customer Support • CRM</div>
-  <h1>Reliable support for better customer experiences.</h1>
-  <p>I am Barnabas Mbachu, a customer-focused professional transitioning into technology, with practical experience in support workflows, CRM platforms, ticket management, troubleshooting and professional communication.</p>
-  <div class="buttons">
-    <a class="btn primary" href="#projects">View My Projects</a>
-    <a class="btn" href="mailto:YOUR-mbachubarnabas@gmail.com">Contact Me</a>
-    <a class="btn" href="https://www.linkedin.com/in/barnabas-mbachu-540ab1172/" target="_blank">LinkedIn</a>
-  </div>
-</div></section>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#home" aria-label="Barnabas Mbachu home">
+        <span class="brand-mark">BM</span>
+        <span>Barnabas Mbachu</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#process">How I Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<section id="about"><div class="wrap">
-  <h2>About Me</h2>
-  <p class="lead">I bring a strong background in customer-facing operations, attention to detail, problem solving and process discipline. I am building my career in remote IT Support, Customer Support, Customer Success and CRM-focused roles.</p>
-  <div class="two" style="margin-top:25px">
-    <div class="card"><h3>What I bring</h3><ul><li>Clear and empathetic customer communication</li><li>Structured issue investigation and escalation</li><li>Ticket documentation and follow-up</li><li>CRM and helpdesk workflow understanding</li><li>Strong attention to detail and accountability</li></ul></div>
-    <div class="card"><h3>Target roles</h3><p>IT Support Specialist<br>Customer Support Specialist<br>Technical Support Representative<br>Customer Success Associate<br>CRM Support / Operations<br>Virtual Assistant / Support Operations</p></div>
-  </div>
-</div></section>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> Open to remote opportunities</div>
+        <h1>IT Support & Customer Support professional who turns problems into <span>better customer experiences.</span></h1>
+        <p class="hero-text">
+          I’m Barnabas Mbachu, a customer-focused professional building a career in technology.
+          I combine strong customer service, operational discipline and practical training across
+          helpdesk, CRM, ticketing and collaboration platforms.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#case-studies">Explore My Work <span>→</span></a>
+          <a class="btn btn-secondary" href="mailto:mbachubarnabas@gmail.com">Let's Talk</a>
+        </div>
+        <div class="hero-meta">
+          <span>📍 Nigeria</span>
+          <span>💻 Remote-ready</span>
+          <span>🎯 IT Support • Customer Support • CRM</span>
+        </div>
+      </div>
 
-<section id="skills"><div class="wrap">
-  <h2>Skills & Tools</h2>
-  <p class="lead">Practical skills I am developing and applying through hands-on training and support scenarios.</p>
-  <div class="card" style="margin-top:25px">
-    <span class="tag">IT Support</span><span class="tag">Customer Support</span><span class="tag">Troubleshooting</span>
-    <span class="tag">CRM</span><span class="tag">Zendesk</span><span class="tag">Freshdesk</span>
-    <span class="tag">Ticket Management</span><span class="tag">Customer Communication</span>
-    <span class="tag">Issue Escalation</span><span class="tag">Documentation</span><span class="tag">Remote Support</span>
-  </div>
-</div></section>
+      <div class="hero-card">
+        <div class="terminal-top"><span></span><span></span><span></span></div>
+        <div class="terminal-body">
+          <p class="terminal-comment">// support mindset</p>
+          <p><span class="code-key">const</span> approach = {</p>
+          <p class="indent">listen: <span class="code-value">true</span>,</p>
+          <p class="indent">investigate: <span class="code-value">true</span>,</p>
+          <p class="indent">document: <span class="code-value">true</span>,</p>
+          <p class="indent">resolve: <span class="code-value">true</span>,</p>
+          <p class="indent">empathy: <span class="code-value">"always"</span></p>
+          <p>};</p>
+          <div class="terminal-line"><span class="pulse"></span> Ready to support your team.</div>
+        </div>
+      </div>
+    </section>
 
-<section id="projects"><div class="wrap">
-  <h2>Portfolio Projects</h2>
-  <p class="lead">Practice projects demonstrating how I approach common support situations.</p>
-  <div class="grid">
-    <div class="card"><h3>Zendesk Ticket Workflow</h3><p>Created a customer-support workflow covering customer identification, ticket creation, issue categorisation, prioritisation, internal notes and follow-up.</p><strong>Skills:</strong> Zendesk • Ticketing • Documentation</div>
-    <div class="card"><h3>Freshdesk Dispense Error Case</h3><p>Built a realistic payment/ATM dispense-error support scenario and drafted an empathetic response that acknowledges the customer, explains the next steps and sets expectations.</p><strong>Skills:</strong> Freshdesk • Empathy • Troubleshooting</div>
-    <div class="card"><h3>Login & Password Support Case</h3><p>Designed a support response for a customer who reset a password but still could not log in, including verification, troubleshooting and escalation steps.</p><strong>Skills:</strong> Troubleshooting • Customer Communication</div>
-  </div>
-</div></section>
+    <section class="section section-dark">
+      <div class="container stats">
+        <div class="stat"><strong>8+</strong><span>Support & productivity tools trained on</span></div>
+        <div class="stat"><strong>5</strong><span>Practical support case studies</span></div>
+        <div class="stat"><strong>100%</strong><span>Customer-focused approach</span></div>
+        <div class="stat"><strong>Remote</strong><span>Work-ready mindset</span></div>
+      </div>
+    </section>
 
-<section><div class="wrap">
-  <h2>How I Work</h2>
-  <div class="grid">
-    <div class="card"><h3>01 — Listen</h3><p>Understand the customer's issue before jumping to a solution.</p></div>
-    <div class="card"><h3>02 — Investigate</h3><p>Gather the relevant details, reproduce or narrow down the problem and document findings.</p></div>
-    <div class="card"><h3>03 — Resolve</h3><p>Provide a clear solution or escalate appropriately while keeping the customer informed.</p></div>
-  </div>
-</div></section>
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <p class="section-label">01 — ABOUT ME</p>
+        <h2>From customer-facing operations to technology support.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">
+            My professional background has taught me that good support is not only about fixing an issue —
+            it is about making people feel heard, keeping accurate records and following through until the
+            problem is resolved.
+          </p>
+          <p>
+            I am currently developing my technology career through hands-on training and practical scenarios
+            involving IT support, customer support, CRM, helpdesk ticketing, troubleshooting and workflow
+            automation. My goal is to bring a combination of customer empathy, process discipline and technical
+            curiosity to a remote-first team.
+          </p>
+          <p>
+            I am particularly interested in roles where I can support customers, troubleshoot everyday issues,
+            manage tickets, maintain CRM records, document solutions and collaborate with internal teams.
+          </p>
+        </div>
+        <div class="about-panel">
+          <div class="mini-card">
+            <span class="mini-icon">01</span>
+            <div><h3>Customer-first</h3><p>Clear, calm and empathetic communication.</p></div>
+          </div>
+          <div class="mini-card">
+            <span class="mini-icon">02</span>
+            <div><h3>Process-minded</h3><p>Structured investigation, documentation and follow-up.</p></div>
+          </div>
+          <div class="mini-card">
+            <span class="mini-icon">03</span>
+            <div><h3>Tech-curious</h3><p>Hands-on learning across support and productivity platforms.</p></div>
+          </div>
+          <div class="mini-card">
+            <span class="mini-icon">04</span>
+            <div><h3>Remote-ready</h3><p>Comfortable communicating, documenting and collaborating online.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="contact" class="contact"><div class="wrap">
-  <h2>Let's Connect</h2>
-  <p class="lead">I am open to remote opportunities in IT Support, Customer Support, Customer Success and support operations.</p>
-  <p><strong>Email:</strong> mbachubarnabas@gmail.com</p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/barnabas-mbachu-540ab1172/" target="_blank">linkedin.com/in/barnabas-mbachu-540ab1172</a></p>
-</div></section>
-</main>
-<footer><div class="wrap">© 2026 Barnabas Mbachu. Built for remote job applications.</div></footer>
-</body></html>
+    <section class="section soft" id="skills">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="section-label">02 — SKILLS & TOOLS</p>
+          <h2>Tools I’ve trained with and skills I’m applying.</h2>
+          <p>My portfolio focuses on practical support workflows rather than simply listing software names.</p>
+        </div>
+
+        <div class="tool-grid">
+          <div class="tool-card"><div class="tool-icon">Z</div><h3>Zendesk</h3><p>Ticket creation, categorisation, prioritisation, notes and follow-up.</p></div>
+          <div class="tool-card"><div class="tool-icon">F</div><h3>Freshdesk</h3><p>Support ticket handling, customer replies and issue documentation.</p></div>
+          <div class="tool-card"><div class="tool-icon">H</div><h3>HubSpot</h3><p>CRM concepts, contact management and customer information workflows.</p></div>
+          <div class="tool-card"><div class="tool-icon">S</div><h3>Slack</h3><p>Team communication, updates, escalation and collaboration.</p></div>
+          <div class="tool-card"><div class="tool-icon">T</div><h3>Microsoft Teams</h3><p>Remote communication, meetings and team coordination.</p></div>
+          <div class="tool-card"><div class="tool-icon">D</div><h3>Dropbox</h3><p>File organisation, sharing and collaborative document workflows.</p></div>
+          <div class="tool-card"><div class="tool-icon">G</div><h3>Google Drive</h3><p>Cloud storage, document management and collaboration.</p></div>
+          <div class="tool-card"><div class="tool-icon">⚡</div><h3>Zapier</h3><p>Workflow automation concepts and connecting everyday business tools.</p></div>
+        </div>
+
+        <div class="skills-list">
+          <span>IT Support</span><span>Customer Support</span><span>Troubleshooting</span><span>Ticket Management</span>
+          <span>CRM</span><span>Issue Escalation</span><span>Customer Communication</span><span>Documentation</span>
+          <span>Remote Support</span><span>Problem Solving</span><span>Process Improvement</span><span>Attention to Detail</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="case-studies">
+      <div class="section-heading">
+        <p class="section-label">03 — CASE STUDIES</p>
+        <h2>Practical support scenarios.</h2>
+        <p>These projects demonstrate how I think through common customer and IT support situations.</p>
+      </div>
+
+      <div class="case-grid">
+        <article class="case-card featured">
+          <div class="case-number">01</div>
+          <div class="case-content">
+            <div class="case-tags"><span>Zendesk</span><span>Ticketing</span><span>Documentation</span></div>
+            <h3>Customer Support Ticket Workflow</h3>
+            <p class="case-summary">Designed a structured workflow for receiving, documenting, prioritising and following up on customer issues.</p>
+            <div class="case-columns">
+              <div><h4>Scenario</h4><p>A customer reports a service problem and expects a quick, clear response.</p></div>
+              <div><h4>My approach</h4><p>Verify customer details, capture the issue accurately, categorise it, set priority, add internal notes and document the next action.</p></div>
+              <div><h4>Outcome</h4><p>A repeatable workflow that keeps the customer informed and gives the support team a clear record.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-number">02</div>
+          <div class="case-content">
+            <div class="case-tags"><span>Freshdesk</span><span>Payments</span><span>Empathy</span></div>
+            <h3>Dispense Error Support Case</h3>
+            <p class="case-summary">Built a realistic payment/ATM dispense-error scenario and customer response.</p>
+            <div class="case-detail"><strong>Problem</strong><p>A customer reports that their account was debited but cash was not received.</p></div>
+            <div class="case-detail"><strong>Response approach</strong><p>Acknowledge the frustration, verify transaction details, explain the investigation process, provide a ticket/reference number and set a clear expectation for follow-up.</p></div>
+            <div class="case-result">Key skill: <b>Empathetic communication + structured escalation</b></div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-number">03</div>
+          <div class="case-content">
+            <div class="case-tags"><span>IT Support</span><span>Troubleshooting</span><span>Escalation</span></div>
+            <h3>Login & Password Recovery</h3>
+            <p class="case-summary">Created a support flow for a user who completed a password reset but still could not access an account.</p>
+            <div class="case-detail"><strong>Investigation</strong><p>Confirm the account, check whether the reset completed, verify credentials are being entered correctly and rule out common browser/device issues.</p></div>
+            <div class="case-detail"><strong>Escalation</strong><p>If the issue persists, document the troubleshooting already performed and escalate with the relevant account and error details.</p></div>
+            <div class="case-result">Key skill: <b>Logical troubleshooting + clean documentation</b></div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-number">04</div>
+          <div class="case-content">
+            <div class="case-tags"><span>HubSpot</span><span>CRM</span><span>Data Quality</span></div>
+            <h3>Customer Contact Management</h3>
+            <p class="case-summary">Practised maintaining accurate customer information and using CRM records to support better service.</p>
+            <div class="case-detail"><strong>Scenario</strong><p>A customer contacts support with an existing account but some contact information is outdated.</p></div>
+            <div class="case-detail"><strong>Approach</strong><p>Verify the customer's details, update the relevant CRM fields, record the interaction and ensure the next support agent can understand the history.</p></div>
+            <div class="case-result">Key skill: <b>CRM hygiene + customer history management</b></div>
+          </div>
+        </article>
+
+        <article class="case-card">
+          <div class="case-number">05</div>
+          <div class="case-content">
+            <div class="case-tags"><span>Zapier</span><span>Google Drive</span><span>Slack</span></div>
+            <h3>Support Workflow Automation Concept</h3>
+            <p class="case-summary">Mapped a simple automation concept to reduce repetitive support-team administration.</p>
+            <div class="case-detail"><strong>Workflow</strong><p>A completed support form or request can trigger a structured record, notify the appropriate team and organise supporting information in a shared workspace.</p></div>
+            <div class="case-detail"><strong>Why it matters</strong><p>Automation can reduce repetitive manual steps while keeping the team aligned and improving consistency.</p></div>
+            <div class="case-result">Key skill: <b>Workflow thinking + cross-platform collaboration</b></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark process-section" id="process">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="section-label">04 — HOW I WORK</p>
+          <h2>A simple support mindset.</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><span>01</span><h3>Listen</h3><p>Understand the customer's actual problem before jumping to a solution.</p></div>
+          <div class="process-step"><span>02</span><h3>Investigate</h3><p>Gather the right details, narrow down the cause and document findings.</p></div>
+          <div class="process-step"><span>03</span><h3>Resolve</h3><p>Provide a clear solution or escalate with complete information.</p></div>
+          <div class="process-step"><span>04</span><h3>Follow through</h3><p>Keep the customer informed and close the loop properly.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="roles">
+      <div class="section-heading centered">
+        <p class="section-label">05 — TARGET ROLES</p>
+        <h2>Where I can add value.</h2>
+      </div>
+      <div class="roles-grid">
+        <div class="role">IT Support Specialist <span>→</span></div>
+        <div class="role">Customer Support Specialist <span>→</span></div>
+        <div class="role">Technical Support Representative <span>→</span></div>
+        <div class="role">Customer Success Associate <span>→</span></div>
+        <div class="role">CRM Support / Operations <span>→</span></div>
+        <div class="role">Virtual Assistant / Support Operations <span>→</span></div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-box">
+        <div>
+          <p class="section-label">06 — LET'S CONNECT</p>
+          <h2>Have a support role that needs a reliable problem-solver?</h2>
+          <p>I’m open to remote opportunities where I can support customers, troubleshoot issues, manage workflows and continue growing in technology.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:mbachubarnabas@gmail.com">Email Me</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/barnabas-mbachu-540ab1172/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="text-link" href="https://github.com/mbachubarnabas" target="_blank" rel="noopener">GitHub profile ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Barnabas Mbachu</span>
+      <span>Built for remote tech opportunities.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
