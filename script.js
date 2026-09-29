@@ -1,26 +1,84 @@
+```javascript
+// ==========================================
+// MOBILE NAVIGATION
+// ==========================================
+
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const progress = document.getElementById("progress");
-const year = document.getElementById("year");
+const navMenu = document.getElementById("navMenu");
 
-menuToggle?.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
-  menuToggle.textContent = open ? "✕" : "☰";
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.textContent = "☰";
-  });
+
+// ==========================================
+// CLOSE MENU WHEN LINK IS CLICKED
+// ==========================================
+
+document.querySelectorAll("nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    });
+
 });
+
+
+// ==========================================
+// NAVBAR SHADOW ON SCROLL
+// ==========================================
 
 window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const height = document.documentElement.scrollHeight - window.innerHeight;
-  progress.style.width = `${height > 0 ? (scrollTop / height) * 100 : 0}%`;
+
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+        navbar.style.boxShadow = "0 5px 25px rgba(0,0,0,0.15)";
+    } else {
+        navbar.style.boxShadow = "none";
+    }
+
 });
 
-year.textContent = new Date().getFullYear();
+
+// ==========================================
+// REVEAL ANIMATION
+// ==========================================
+
+const revealElements = document.querySelectorAll(
+    ".highlight-card, .case-card, .tool-card, .timeline-content"
+);
+
+const revealObserver = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+
+revealElements.forEach(element => {
+
+    element.style.opacity = "0";
+    element.style.transform = "translateY(25px)";
+    element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+
+    revealObserver.observe(element);
+
+});
+```
