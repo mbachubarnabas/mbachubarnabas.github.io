@@ -1798,69 +1798,40 @@ nav a:hover::after {
 ===================================================== */
 
 .cta-section {
-
     padding: 80px 0;
-
-    color: white;
-
+    color: #ffffff;
     background:
         linear-gradient(
             135deg,
             var(--blue),
             #1d4ed8
         );
-
 }
-
-
-.cta-container {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 40px;
-
-}
-
 
 .light-label {
-
-    color: #bae6fd;
-
+    color: #0f172a;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
-
 
 .cta-section h2 {
-
     max-width: 700px;
-
     font-size: clamp(2rem, 4vw, 3rem);
-
     line-height: 1.15;
-
+    color: #ffffff;
 }
-
 
 .cta-section h2 span {
-
-    color: #bae6fd;
-
+    color: #0f172a;
+    font-weight: 800;
 }
-
 
 .cta-section p {
-
     max-width: 650px;
-
     margin-top: 12px;
-
-    color: #dbeafe;
-
+    color: #ffffff;
+    font-weight: 500;
 }
-
 
 /* =====================================================
    CONTACT
