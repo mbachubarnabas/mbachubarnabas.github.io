@@ -2661,3 +2661,194 @@ button:focus-visible {
         padding: 26px;
     }
 }
+/* =====================================================
+   FINAL CONTACT + FOOTER VISIBILITY FIX
+===================================================== */
+
+/* CONTACT SECTION */
+#contact,
+.contact-section {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+/* "CONTACT" label */
+#contact .section-label,
+#contact .dark-label,
+.contact-section .section-label,
+.contact-section .dark-label {
+    color: #60a5fa !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+}
+
+/* "Let's connect." heading */
+#contact h1,
+#contact h2,
+#contact h3,
+.contact-section h1,
+.contact-section h2,
+.contact-section h3 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    opacity: 1 !important;
+}
+
+/* Main paragraph */
+#contact p,
+.contact-section p {
+    color: #cbd5e1 !important;
+    opacity: 1 !important;
+}
+
+/* Contact email and LinkedIn */
+#contact a,
+.contact-section a {
+    color: #f8fafc !important;
+    opacity: 1 !important;
+}
+
+/* Email / LinkedIn labels */
+#contact .contact-links a,
+.contact-section .contact-links a {
+    color: #f8fafc !important;
+    font-weight: 600 !important;
+}
+
+/* Email and LinkedIn hover */
+#contact a:hover,
+.contact-section a:hover {
+    color: #60a5fa !important;
+}
+
+/* Small labels such as EMAIL / LINKEDIN */
+#contact small,
+.contact-section small {
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+/* Open to opportunities heading */
+#contact .contact-card h3,
+.contact-section .contact-card h3 {
+    color: #0f172a !important;
+    font-weight: 800 !important;
+}
+
+/* Open to opportunities paragraph */
+#contact .contact-card p,
+.contact-section .contact-card p {
+    color: #334155 !important;
+}
+
+/* Opportunity list */
+#contact .contact-card li,
+.contact-section .contact-card li {
+    color: #334155 !important;
+    font-weight: 600 !important;
+}
+
+/* Check marks */
+#contact .contact-card li::marker,
+.contact-section .contact-card li::marker {
+    color: #2563eb !important;
+}
+
+/* Contact Me button */
+#contact .btn,
+#contact .btn-primary,
+#contact .btn-light,
+.contact-section .btn,
+.contact-section .btn-primary,
+.contact-section .btn-light {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+}
+
+/* Contact button hover */
+#contact .btn:hover,
+#contact .btn-primary:hover,
+#contact .btn-light:hover,
+.contact-section .btn:hover,
+.contact-section .btn-primary:hover,
+.contact-section .btn-light:hover {
+    background: #1d4ed8 !important;
+    color: #ffffff !important;
+    border-color: #1d4ed8 !important;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer,
+.site-footer {
+    background: #020617 !important;
+    color: #cbd5e1 !important;
+}
+
+/* Copyright */
+footer p,
+.site-footer p {
+    color: #cbd5e1 !important;
+    opacity: 1 !important;
+}
+
+/* Footer links */
+footer a,
+.site-footer a,
+.footer-links a {
+    color: #cbd5e1 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+/* Footer links hover */
+footer a:hover,
+.site-footer a:hover,
+.footer-links a:hover {
+    color: #60a5fa !important;
+}
+
+
+/* =====================================================
+   MOBILE CONTACT FIX
+===================================================== */
+
+@media (max-width: 768px) {
+
+    #contact h1,
+    #contact h2,
+    .contact-section h1,
+    .contact-section h2 {
+        color: #ffffff !important;
+    }
+
+    #contact p,
+    .contact-section p {
+        color: #cbd5e1 !important;
+    }
+
+    #contact .contact-card,
+    .contact-section .contact-card {
+        background: #ffffff !important;
+        color: #0f172a !important;
+    }
+
+    #contact .contact-card h3,
+    .contact-section .contact-card h3 {
+        color: #0f172a !important;
+    }
+
+    #contact .contact-card p,
+    #contact .contact-card li,
+    .contact-section .contact-card p,
+    .contact-section .contact-card li {
+        color: #334155 !important;
+    }
+}
