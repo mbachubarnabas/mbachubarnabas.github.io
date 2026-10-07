@@ -2394,3 +2394,270 @@ footer {
 
 }
 ```
+/* =====================================================
+   ACCESSIBILITY + CONTRAST REFINEMENT
+   Added 07 Oct 2026
+   Purpose: improve text visibility across light/dark sections
+===================================================== */
+
+:root {
+    --text-strong: #0f172a;
+    --text-body: #334155;
+    --text-muted-strong: #475569;
+    --text-on-dark: #f8fafc;
+    --text-on-dark-muted: #cbd5e1;
+}
+
+/* =====================================================
+   GLOBAL TEXT HIERARCHY
+===================================================== */
+
+body {
+    color: var(--text-strong);
+    font-weight: 400;
+}
+
+p {
+    color: var(--text-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: var(--text-strong);
+}
+
+
+/* =====================================================
+   LIGHT SECTIONS
+===================================================== */
+
+.section-heading p,
+.about-text p,
+.highlight-card p,
+.case-card > p,
+.timeline-content p,
+.contact-card p {
+    color: var(--text-body);
+}
+
+.section-heading h2,
+.skills-column h3,
+.tools-column h3,
+.highlight-card h3,
+.case-card h3,
+.timeline-content h3,
+.contact-card h3 {
+    color: var(--text-strong);
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skill-list span {
+    color: var(--text-strong);
+    font-weight: 600;
+}
+
+.tool-card strong {
+    color: var(--text-strong);
+    font-weight: 700;
+}
+
+.tool-card small {
+    color: var(--text-muted-strong);
+    font-weight: 500;
+}
+
+.tool-number {
+    color: #c7d2fe;
+}
+
+
+/* =====================================================
+   CASE STUDIES
+===================================================== */
+
+.case-category,
+.timeline-date {
+    color: #1d4ed8;
+    font-weight: 800;
+}
+
+.case-card > p,
+.timeline-content p {
+    color: var(--text-body);
+    line-height: 1.75;
+}
+
+.case-details strong {
+    color: var(--text-strong);
+    font-weight: 700;
+}
+
+.case-tags span,
+.timeline-tags span {
+    color: #334155;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience-section {
+    color: var(--text-strong);
+}
+
+.timeline-content {
+    color: var(--text-strong);
+}
+
+
+/* =====================================================
+   CTA — LET'S WORK TOGETHER
+===================================================== */
+
+.cta-section {
+    color: #0f172a;
+}
+
+.cta-section .section-label,
+.cta-section .dark-label {
+    color: #1e3a8a;
+    font-weight: 800;
+}
+
+.cta-section h2,
+.cta-section h2 span {
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.cta-section p {
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+/* CTA button */
+.cta-section .btn-light {
+    color: #ffffff;
+    background: #1d4ed8;
+    border: 1px solid #1d4ed8;
+}
+
+.cta-section .btn-light:hover {
+    color: #ffffff;
+    background: #1e40af;
+}
+
+
+/* =====================================================
+   DARK CONTACT SECTION
+===================================================== */
+
+.contact-section {
+    color: #f8fafc;
+}
+
+.contact-info h2 {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.contact-info > p {
+    color: #cbd5e1;
+    line-height: 1.75;
+}
+
+.contact-links small {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.contact-links a > span:last-child {
+    color: #f1f5f9;
+    font-weight: 600;
+}
+
+.contact-links a:hover > span:last-child {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CONTACT CARD
+===================================================== */
+
+.contact-card {
+    color: var(--text-strong);
+}
+
+.contact-card h3 {
+    color: var(--text-strong);
+}
+
+.contact-card p {
+    color: var(--text-body);
+}
+
+.contact-card li {
+    color: #334155;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    color: #cbd5e1;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+}
+
+
+/* =====================================================
+   KEYBOARD ACCESSIBILITY
+===================================================== */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #38bdf8;
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   MOBILE READABILITY
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .about-text p,
+    .section-heading p,
+    .case-card > p,
+    .timeline-content p,
+    .cta-section p,
+    .contact-info > p {
+        font-size: 0.96rem;
+    }
+
+    .case-card,
+    .timeline-content,
+    .contact-card {
+        padding: 26px;
+    }
+}
